@@ -23,6 +23,7 @@ double leibnez(int digits) {
 double bbp(int digits) {
     double sum = 0;
     for (int i = 0; i < digits; i++) {
+	// actual formula is 1/16^i * ( (4/8k+1) - (2/8k+4) - (1/8k+5) - (1/8k+6))
         sum += (1 / pow(16.0, (double) i)) * (4.0/(8 * i + 1) - (2.0/(8 * i + 4)) - (1.0/(8 * i + 5)) - (1.0/(8 * i + 6)));
     }
     return sum;
